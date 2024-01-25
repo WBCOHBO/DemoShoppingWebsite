@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace DemoShoppingWebsite.Controllers
 {
@@ -39,6 +40,33 @@ namespace DemoShoppingWebsite.Controllers
                 return RedirectToAction("Login");
             }
             ViewBag.Message = "帳號已被使用，請重新註冊";
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string UserId, string Password)
+        {
+            //找出符合登入帳密的Member資料
+            var member = db.table_Member.Where(m => m.UserId.Equals(UserId) && m.Password == Password).FirstOrDefault();
+            if (UserId != null || Password != null)
+            {
+                if (member == null)
+                {
+                    ViewBag.Message = "帳號或密碼錯誤，請重新確認";
+                    return View();
+                }
+                else
+                {
+                    Session["Welcome"] = $"{member.Name} 您好";
+                    FormsAuthentication.RedirectFromLoginPage(UserId, true);
+                    return RedirectToAction("Index", "Member");
+                }
+            }
             return View();
         }
     }
