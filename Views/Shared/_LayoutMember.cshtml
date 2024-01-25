@@ -24,7 +24,7 @@
                     <li>@Html.ActionLink("購物車", "ShoppingCar", "Member", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("訂單", "OrderList", "Member", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("登出", "LogOut", "Member", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li><a href="#">@Session["Welcome"]</a></li>
+                    <li class = "nav-link"><a href="#" style="text-decoration:none;" class="link-light">@Session["Welcome"]</a></li>
                 </ul>
             </div>
         </div>

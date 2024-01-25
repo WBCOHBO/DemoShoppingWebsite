@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -182,6 +183,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="image\nintendo_switch.jpg" />
+    <Content Include="image\ringfit.jpg" />
+    <Content Include="image\switch_controller.jpg" />
+    <Content Include="image\xiaomi_cleanrobot.jpg" />
+    <Content Include="image\xiaomi_remote_monitor.jpg" />
+    <Content Include="image\xiaomi_smartring_6.jpg" />
     <Content Include="Models\ShoppingCar.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ShoppingCar.Context.cs</LastGenOutput>
@@ -230,6 +237,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Shared\_LayoutMember.cshtml" />
+    <Content Include="Views\Member\ShoppingCar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
