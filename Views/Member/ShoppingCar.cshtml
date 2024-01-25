@@ -58,7 +58,7 @@
                 @Html.DisplayFor(modelItem => item.IsApproved)
             </td>
             <td>
-                <a href="@Url.Action("DeleteCar")?Id = @item.Id" class="btn btn-danger" onclick="return confirm('確定刪除 @item.Name 嗎?')">刪除</a>
+                <a href="@Url.Action("DeleteCar")?Id=@item.Id" class="btn btn-danger" onclick="return confirm('確定刪除 @item.Name 嗎?')">刪除</a>
             </td>
         </tr>
     }
