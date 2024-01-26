@@ -8,10 +8,10 @@ using System.Web.Security;
 
 namespace DemoShoppingWebsite.Controllers
 {
-    [Authorize]
+    [Authorize] //登入後才會顯示以下的controller view
     public class MemberController : Controller
     {
-        dbShoppingCarEntities db = new dbShoppingCarEntities();
+        dbShoppingCarEntities db = new dbShoppingCarEntities(); //匯入db
         // GET: Member
         public ActionResult Index()
         {
@@ -99,6 +99,20 @@ namespace DemoShoppingWebsite.Controllers
             }
             db.SaveChanges();
             return RedirectToAction("OrderList");
+        }
+
+        public ActionResult OrderList()
+        {
+            string userId = User.Identity.Name;
+            var orders = db.table_Order.Where(m => m.UserId == userId).OrderByDescending(m => m.Date).ToList();
+            return View(orders);
+        }
+
+        //由OrderList.cshtml的<a href="@Url.Action("OrderDetail")?OrderGuid=@item.OrderGuid"傳Guid過來
+        public ActionResult OrderDetail(string OrderGuid)
+        {
+            var orderDetails = db.table_OrderDetail.Where(m => m.OrderGuid == OrderGuid).ToList();
+            return View(orderDetails);
         }
     }
 }
