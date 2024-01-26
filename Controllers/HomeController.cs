@@ -5,12 +5,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using static DemoShoppingWebsite.Models.EncryptService;
 
 namespace DemoShoppingWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        dbShoppingCarAzureEntities db = new dbShoppingCarAzureEntities();
+        dbShoppingCarAzureEntities db = ConnectStringService.CreateDBContext();
         public ActionResult Index()
         {
             var products = db.table_Product.OrderByDescending(m =>  m.Id).ToList();

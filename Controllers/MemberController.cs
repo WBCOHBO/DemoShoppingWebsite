@@ -5,13 +5,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using static DemoShoppingWebsite.Models.EncryptService;
 
 namespace DemoShoppingWebsite.Controllers
 {
     [Authorize] //登入後才會顯示以下的controller view
     public class MemberController : Controller
     {
-        dbShoppingCarAzureEntities db = new dbShoppingCarAzureEntities(); //匯入db
+        dbShoppingCarAzureEntities db = ConnectStringService.CreateDBContext(); //匯入db
         // GET: Member
         public ActionResult Index()
         {
