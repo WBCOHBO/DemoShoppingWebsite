@@ -275,6 +275,7 @@
     <Content Include="Views\Member\ShoppingCar.cshtml" />
     <Content Include="Views\Member\OrderList.cshtml" />
     <Content Include="Views\Member\OrderDetail.cshtml" />
+    <Content Include="Views\Shared\_ProductList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
