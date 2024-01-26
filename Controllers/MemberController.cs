@@ -11,7 +11,7 @@ namespace DemoShoppingWebsite.Controllers
     [Authorize] //登入後才會顯示以下的controller view
     public class MemberController : Controller
     {
-        dbShoppingCarEntities db = new dbShoppingCarEntities(); //匯入db
+        dbShoppingCarAzureEntities db = new dbShoppingCarAzureEntities(); //匯入db
         // GET: Member
         public ActionResult Index()
         {

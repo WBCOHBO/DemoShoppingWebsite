@@ -16,16 +16,16 @@ namespace DemoShoppingWebsite.Models
     public partial class table_Order
     {
         public int Id { get; set; }
-        
+
         [DisplayName("訂單編號")]
         public string OrderGuid { get; set; }
-        
+
         [DisplayName("會員帳號")]
         public string UserId { get; set; }
-        
+
         [DisplayName("收件人姓名")]
         public string Receiver { get; set; }
-        
+
         [DisplayName("收件人信箱")]
         public string Email { get; set; }
 

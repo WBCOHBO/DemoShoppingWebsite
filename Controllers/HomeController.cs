@@ -10,7 +10,7 @@ namespace DemoShoppingWebsite.Controllers
 {
     public class HomeController : Controller
     {
-        dbShoppingCarEntities db = new dbShoppingCarEntities();
+        dbShoppingCarAzureEntities db = new dbShoppingCarAzureEntities();
         public ActionResult Index()
         {
             var products = db.table_Product.OrderByDescending(m =>  m.Id).ToList();

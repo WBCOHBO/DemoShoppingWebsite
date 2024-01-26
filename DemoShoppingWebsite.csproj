@@ -149,17 +149,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ShoppingCar.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ShoppingCarAzure.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShoppingCarAzure.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShoppingCarAzure.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShoppingCarAzure.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShoppingCarAzure.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShoppingCarAzure.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\table_Member.cs">
-      <DependentUpon>ShoppingCar.tt</DependentUpon>
+      <DependentUpon>ShoppingCarAzure.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\table_Order.cs">
-      <DependentUpon>ShoppingCar.tt</DependentUpon>
+      <DependentUpon>ShoppingCarAzure.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\table_OrderDetail.cs">
-      <DependentUpon>ShoppingCar.tt</DependentUpon>
+      <DependentUpon>ShoppingCarAzure.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\table_Product.cs">
-      <DependentUpon>ShoppingCar.tt</DependentUpon>
+      <DependentUpon>ShoppingCarAzure.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -199,6 +214,16 @@
       <DependentUpon>ShoppingCar.edmx</DependentUpon>
       <LastGenOutput>ShoppingCar.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ShoppingCarAzure.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ShoppingCarAzure.Context.cs</LastGenOutput>
+      <DependentUpon>ShoppingCarAzure.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ShoppingCarAzure.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShoppingCarAzure.edmx</DependentUpon>
+      <LastGenOutput>ShoppingCarAzure.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -212,6 +237,14 @@
     <Content Include="Models\ShoppingCar.edmx.diagram">
       <DependentUpon>ShoppingCar.edmx</DependentUpon>
     </Content>
+    <EntityDeploy Include="Models\ShoppingCarAzure.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ShoppingCarAzure.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ShoppingCarAzure.edmx.diagram">
+      <DependentUpon>ShoppingCarAzure.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\AndyShoppingWebsite - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
