@@ -23,6 +23,12 @@ namespace DemoShoppingWebsite.Models
         [Required]
         [DisplayName("密碼")]
         public string Password { get; set; }
+
+        [DisplayName("再次輸入密碼")]
+        [Required]
+        [Compare("Password", ErrorMessage = "輸入密碼必須相同")]
+        public string Password2 { get; set; }
+
         [Required]
         [DisplayName("姓名")]
         public string Name { get; set; }
